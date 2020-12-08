@@ -8,6 +8,11 @@ export class HomeComponent {
     user: User;
 
     constructor(private accountService: AccountService) {
-        this.user = this.accountService.userValue;
     }
+    
+    ngOnInit() {
+        this.user = this.accountService.userValue;
+        console.log(this.user);
+    }
+    
 }

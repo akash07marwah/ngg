@@ -10,19 +10,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
-import { HomeComponent } from './home';
+import { HomeComponent } from './home';;
+import { UploadComponent } from './upload/upload.component'
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { ClipboardModule } from 'ngx-clipboard';
+
 
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
+        AngularEditorModule,
+        ClipboardModule
     ],
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent
+        HomeComponent,
+        UploadComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

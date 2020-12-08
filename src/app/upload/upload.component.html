@@ -1,0 +1,33 @@
+
+
+<div class="w3-content" style="max-width:1500px">
+      <h1 class="w3-xlarge type" style="text-align:center">TRANSCRIBE.IT </h1>
+      <!-- <form action="/upload" enctype="multipart/form-data" method="POST">  -->
+      <span> <h1 style="text-align: center;">Upload File</h1></span>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-4 col-lg-4 col-md-4"></div>
+        <div class="col-sm-4 col-lg-4 col-md-4"> 
+            <input (change) ="fileChange($event)"  type="file" class="form-control-file" name="UploadedFile"/> 
+        <br> 
+        </div> 
+        <div class="col-sm-4 col-lg-4 col-md-4">
+        <input class="btn btn-success upd" type="submit" (click)="uploadFile()" value="submit" />
+        </div>
+        
+    </div> 
+        <!-- </form>  -->
+        
+</div>
+
+<div class="container">
+	<header class="header">
+        <h1>Transcript Editor</h1>
+        <h3>Ctrl + V to edit Transcript</h3>
+        <p>{{res}}</p>
+	</header>
+	<angular-editor  [config]="config"></angular-editor>
+</div>
+<footer style="padding-bottom:100px;padding-top: 50px;">
+    <p style="text-align: center;">Made by <a href="https://github.com/akash07marwah/TranscriberApp" target="_blank" class="w3-hover-text-green">Akash Marwah and Rishabh Bhanot</a> </p>
+</footer>
